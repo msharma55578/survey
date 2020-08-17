@@ -18,10 +18,16 @@ const [newQuestion,setNewQuestion]=useState({
 
 const publishForm=()=>{
   console.log("Here");
-    axios.post("http://localhost:8081",{
-    surveyForm:surveyForm
+    axios.post("http://localhost:3008/question",{
+    surveyForm:newQuestion
+  })
+  console.log("Here");
+    axios.get("http://localhost:3008/",{
+    surveyForm:newQuestion
+    
   })
 }
+
 
 return (
   <>
